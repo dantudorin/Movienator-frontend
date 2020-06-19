@@ -1,0 +1,93 @@
+.Logo {
+    display: contents;
+}
+
+.Logo:hover {
+    cursor: pointer;
+}
+
+.Menu {
+    height: 100%;
+    width: 100%;
+}
+
+.Menu nav ul {
+    float: right;
+    margin: 20px;
+}
+
+.Menu nav ul li {
+    display: inline-block;
+    margin: 0 7px;
+    padding: 5px;
+}
+
+.Menu nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: larger;
+    padding: 5px;
+}
+
+.Menu nav ul li a.active {
+    background-color: rgba(255, 255, 255, 0.37);
+    border-radius: 3px;
+}
+
+.CheckButton {
+    float: right;
+    margin: 10px 0px;
+    cursor: pointer;
+    display: none;
+}
+
+#check {
+    display: none;
+}
+
+@media (max-width: 952px) {
+    .Menu nav ul li a {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 858px) {
+    .CheckButton {
+        display: block;
+    }
+
+    .Menu ul {
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background-color: #f8f8f8;
+        top: 57px;
+        left: -110%;
+        text-align: center;
+        transition: all .5s;
+        padding: 0px;
+    }
+
+    .Menu nav ul li {
+        display: block;
+        margin: 7px 0px;
+    }
+
+    .Menu nav ul li a{
+        font-size: 16px;
+        color: #0d4092;
+        font-weight: bold;
+    }
+
+    .Menu nav ul li a:hover, a.active {
+        background-color: #86a6df;
+        padding: 7px;
+        font-size: 17px;
+        border-radius: 5px;
+        color: #0d4092;
+    }
+    #check:checked ~ul {
+        left: 0;
+    }
+
+}
